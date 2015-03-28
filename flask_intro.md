@@ -12,54 +12,15 @@
 * **Areas of Interest**:
 	* _Computational Interests_
 		* Natural language processing:
-			* Automated Text Analysis
-			* Text Classification
-			* Optical Character Recognition
-			* Document Similarity
-			* Language Translation
-			* Speech To Text
 		* Predictive Mathematics / Statistics:
-			* Linear Models:
-				* Support Vector Machines
-				* Linear Regression
-				* Linear Kernel
-			* Non-Linear Models:
-				* Differential Equations
-				* K-means
-				* Deep Learning (generally)
-				* Ensemble Models
-				* Tree-Based Models:
-					* Decision Trees
-					* Random Forrests
-				* Boosting Models
-				* Graph-Based Models:
-					* Neural Networks
-					* Etc.
 	* _Theoretical Interests_
 		* Algebra:
-			* Group Theory
-			* Ring Theory
-			* Homotopy
-			* Category Theory
-			* Advanced Linear Algebra
-			* Ideals
 		* Topology:
-			* Point/Set topology
-			* Manifold Theory
-			* Non-Euclidean Geometry
 		* Combined Topics:
-			* Spectral Theory
-			* Erogodic Theory
 		* Meme Theory
 	* _Economics_
 		* International Economics
-			* Trade Theory
-			* Hottelling models
-			* Geopolitical economics
 		* Econometrics
-			* DSGE model
-			* Hypothesis testing
-			* Principal Component Analysis
 		* Environmental Economics
 		* Financial Economics
 		* Macro Economics
