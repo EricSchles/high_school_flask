@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head></head>
+<body>
+
+{% if name=="Eric" %}
+<p>Hello Eric</p>
+<ul>
+{% for key in things.keys() %}
+<li> {{key}} : {{things[key]}}</li>
+{% endfor %}
+
+</ul>
+
+{% else %}
+<p>Hello there</p>
+{% endif %}
+
+</body>
+</html>

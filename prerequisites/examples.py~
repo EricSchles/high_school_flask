@@ -1,0 +1,4 @@
+def currency(f):
+    def wrapper(*args,**kwargs):
+        return "$" + str(f(*args,**kwargs))
+    return wrapper

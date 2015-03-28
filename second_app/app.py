@@ -1,0 +1,27 @@
+from flask import Flask, render_template, url_for, redirect
+
+app = Flask(__name__)
+
+@app.route("/<functionality>",methods=["GET","POST"])
+@app.route("/index",methods=["GET","POST"])
+def index(functionality=None):
+    if functionality == "redirect":
+        return redirect("/hello")
+    elif functionality == "redirect2":
+        return redirect(url_for("hi_there"))
+    else:
+        return render_template("index.html")
+
+@app.route("/hello",methods=["GET","POST"])
+def hello():
+    return "Hello"
+
+@app.route("/hi_there",methods=["GET","POST"])
+def hi_there():
+    return "Hi there"
+
+app.run(
+    debug=True,
+    host="0.0.0.0", #broadcast mode
+    port=5000
+)

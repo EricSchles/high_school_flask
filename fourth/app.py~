@@ -1,0 +1,23 @@
+from flask import Flask, has_request_context
+from flask.ext.sqlachlemy import SQLAlchemy
+import os
+app = Flask(__name__)
+app.config["SQLALCHEMY_DATABASE_URI"] = os.environ["DATABASE_URL"]
+db = SQLAlchemy(app)
+class Log(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    ip_addr = db.Column(db.String(300))
+    def __init__(self,ip_addr):
+        self.ip_addr = ip_addr
+    def __repr__(self):
+        return '<ip_address %r>' % self.ip_addr
+@app.route("/",methods=["GET","POST"])
+def index():
+    if remote_addr is None and has_request_context():
+        remote_addr = request.remote_addr
+    elif request.headers.getlist("X-Forwarded-For")[0] and has_request_context():
+        remote_addr = request.headers.getlist("X-Forwarded-For")[0]
+        log = Log(remote_addr)
+        db.session.add(log)
+        db.session.commit()
+    return render_template("index.html")
